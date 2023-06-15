@@ -14,7 +14,9 @@ class m230613_152430_create_wish_types_table extends Migration
     {
         $this->createTable('wish_types', [
             'id' => $this->primaryKey(),
-            'name'
+            'title' => $this->string(128)->unique(),
+            'created_at' => $this->timestamp()->defaultExpression('NOW()'),
+            'updated_at' => $this->timestamp()->defaultExpression('NOW()')->append('ON UPDATE NOW()'),
         ]);
     }
 
