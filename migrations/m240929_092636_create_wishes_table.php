@@ -24,7 +24,6 @@ class m240929_092636_create_wishes_table extends Migration
             'priority' => $this->boolean()->defaultValue(0),
             'visibility' => $this->boolean()->defaultValue(0),
             'status' => $this->boolean()->defaultValue(0),
-            'is_reserved' => $this->boolean()->defaultValue(0),
             'wish_type_id' => $this->integer()->null(),
             'created_at' => $this->timestamp()->defaultExpression('NOW()'),
             'updated_at' => $this->timestamp()->defaultExpression('NOW()')->append('ON UPDATE NOW()'),
